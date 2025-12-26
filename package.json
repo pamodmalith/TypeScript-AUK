@@ -1,0 +1,23 @@
+{
+  "name": "typescript-auk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "/dist/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pamodmalith/TypeScript-AUK.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pamodmalith/TypeScript-AUK/issues"
+  },
+  "homepage": "https://github.com/pamodmalith/TypeScript-AUK#readme",
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}

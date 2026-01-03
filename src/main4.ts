@@ -51,3 +51,14 @@ function loginUser(username: string, password: string) {
 loginUser("bob30", "securePass");
 loginUser("bob30", "wrongPass");
 loginUser("wrongUser", "wrongPass");
+
+const numberCheck = (num1: number, num2: number): number => {
+  if (num1 > num2) {
+    return num1;
+  } else {
+    return num2;
+  }
+};
+
+const numberCheckResult = numberCheck(10, 20);
+console.log(numberCheckResult);

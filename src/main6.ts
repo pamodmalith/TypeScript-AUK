@@ -32,11 +32,67 @@ class SystemUser {
       i++;
     }
   }
+
+  forLoopExample(): void {
+    for (let i = 0; i < 10; i++) {
+      console.log(i);
+    }
+  }
+
+  arrayForLoopExample(): void {
+    const fruits: string[] = ["Apple", "Banana", "Mango", "Orange"];
+    for (let i = 0; i < fruits.length; i++) {
+      console.log(fruits[i]);
+    }
+  }
 }
 
 const user1 = new SystemUser("Alice", 25, "Colombo", "alice25", "password123");
 
-console.log(user1);
+// console.log(user1);
 
-user1.login();
-user1.printOneToTen();
+// user1.login();
+// user1.printOneToTen();
+// user1.forLoopExample();
+// user1.arrayForLoopExample();
+
+const user2 = {
+  name: "Bob",
+  age: 30,
+  city: "New York",
+  username: "bob30",
+  password: "securePass",
+  address1: "123 Main St",
+  address2: "Apt 4B",
+  address3: "New York, NY 10001",
+};
+
+const user2Keys = Object.keys(user2);
+console.log(user2Keys);
+
+let index = 0;
+let fullAddress = "";
+
+while (index < user2Keys.length) {
+  if (user2Keys[index]?.includes("address")) {
+    fullAddress += " " + user2[user2Keys[index]];
+  }
+  console.log(user2Keys[index]);
+  index++;
+}
+console.log(fullAddress);
+
+// console.log(user2Keys);
+for (let i = 0; i < user2Keys.length; i++) {
+  // console.log(user2Keys[i]);
+}
+
+// for...of loop example
+for (const key of user2Keys) {
+  console.log(key);
+}
+
+// for...in loop example
+for (const key in user2) {
+  console.log(key);
+}

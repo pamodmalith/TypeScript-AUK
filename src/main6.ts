@@ -67,17 +67,18 @@ const user2 = {
   address3: "New York, NY 10001",
 };
 
-const user2Keys = Object.keys(user2);
+const user2Keys = Object.keys(user2) as Array<keyof typeof user2>;
 console.log(user2Keys);
 
 let index = 0;
 let fullAddress = "";
 
 while (index < user2Keys.length) {
-  if (user2Keys[index]?.includes("address")) {
-    fullAddress += " " + user2[user2Keys[index]];
+  const key = user2Keys[index];
+  if (key && key.includes("address")) {
+    fullAddress += " " + user2[key];
   }
-  console.log(user2Keys[index]);
+  console.log(key);
   index++;
 }
 console.log(fullAddress);
